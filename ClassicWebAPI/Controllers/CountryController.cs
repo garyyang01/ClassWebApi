@@ -7,8 +7,6 @@ using ClassicWebAPI.Services.Interfaces;
 
 namespace ClassicWebAPI.Controllers
 {
-    [ApiController]
-    [Route("[controller]/[action]")]
     public class CountryController : ControllerBase
     {
 
