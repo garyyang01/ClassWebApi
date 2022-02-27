@@ -1,18 +1,11 @@
+using ClassicWebAPI.Services;
+using ClassicWebAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ClassicWebAPI.Controllers;
-using ClassicWebAPI.Services;
-using ClassicWebAPI.Services.Interfaces;
 
 namespace ClassicWebAPI
 {
@@ -30,7 +23,7 @@ namespace ClassicWebAPI
         {
             services.AddHttpClient();
             services.AddHttpClient<IHttpClientService, HttpClientService>().SetHandlerLifetime(TimeSpan.FromSeconds(5));
-            services.AddScoped<ICountryService,CountryService>();
+            services.AddScoped<ICountryService, CountryService>();
             services.AddControllers();
         }
 

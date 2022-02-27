@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ClassicWebAPI.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using ClassicWebAPI.Models;
 
 namespace ClassicWebAPI.Services.Interfaces
 {

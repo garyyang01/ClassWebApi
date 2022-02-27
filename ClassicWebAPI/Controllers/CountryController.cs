@@ -1,15 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Linq;
+﻿using ClassicWebAPI.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using ClassicWebAPI.Services.Interfaces;
 
 namespace ClassicWebAPI.Controllers
 {
     public class CountryController : ControllerBase
     {
-
         private readonly ICountryService _countryService;
 
         public CountryController(ICountryService countryService)
@@ -28,6 +24,5 @@ namespace ClassicWebAPI.Controllers
         {
             return new JsonResult(await _countryService.GetAll());
         }
-
     }
 }
